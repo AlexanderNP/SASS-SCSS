@@ -1,0 +1,83 @@
+@import "reset.scss";
+@import "var.scss";
+@import "mixin.scss";
+
+/*=========================================Переменные====================================*/
+.main {
+  background: $main-bg-color;
+}
+
+article {
+  font-size: $font-size;
+}
+
+p {
+  font-size: $font-size;
+}
+
+
+
+/*====================================Вложенность=========================================*/
+
+.header {
+  body & {
+    font-size: 15px;
+  }
+
+  &__top-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__left{
+    background: $main-bg-color;
+  }
+  &__logo {
+    font-size: $font-size;
+
+    &--center {
+      text-align: center;
+    }
+  }
+
+  &__nav-item::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: sticky;
+  }
+}
+
+@media(min-width:400px) {
+  @media (max-width:800px) {
+    .header__top {
+      background: {
+        color: #fff;
+      }
+    }
+  }
+}
+
+/*====================================Шаблоны=========================================*/
+.header {
+  &__title {
+    @extend %title;
+  }
+}
+
+/*====================================Миксины=========================================*/
+
+.header {
+  position: relative;
+  &::after {
+    @include pos(50, 100);
+  }
+}
+
+/*====================================МатОператоры=========================================*/
+
+.block{
+  height: 599px/1300px * 100%;
+  width: 599px/1300px * 50%;
+}

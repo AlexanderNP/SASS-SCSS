@@ -1,0 +1,82 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.header__title {
+  font-weight: 800;
+  font-size: 58px;
+  line-height: 76px;
+  letter-spacing: -0.03em;
+}
+
+/*=========================================Переменные====================================*/
+.main {
+  background: #2379e9;
+}
+
+article {
+  font-size: 20px;
+}
+
+p {
+  font-size: 20px;
+}
+
+/*====================================Вложенность=========================================*/
+body .header {
+  font-size: 15px;
+}
+.header__top-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__left {
+  background: #2379e9;
+}
+.header__logo {
+  font-size: 20px;
+}
+.header__logo--center {
+  text-align: center;
+}
+.header__nav-item::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: sticky;
+}
+
+@media (min-width: 400px) and (max-width: 800px) {
+  .header__top {
+    background-color: #fff;
+  }
+}
+/*====================================Шаблоны=========================================*/
+/*====================================Миксины=========================================*/
+.header {
+  position: relative;
+}
+.header::after {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+/*====================================МатОператоры=========================================*/
+.block {
+  height: 46.0769230769%;
+  width: 23.0384615385%;
+}

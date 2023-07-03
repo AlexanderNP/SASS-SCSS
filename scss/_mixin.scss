@@ -1,0 +1,13 @@
+%title {
+  font-weight: 800;
+  font-size: 58px;
+  line-height: 76px;
+  letter-spacing: -0.03em;
+}
+
+@mixin pos($top: 50, $left: 50) {
+  position: absolute;
+  top: #{$top + "%"};
+  left: #{$left + "%"};
+  transform: translate(-50%, -50%);
+}
